@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/delete_selected_files"
+        android:title="선택된 파일 삭제" />
+    <item
+        android:id="@+id/cancel_selection_mode"
+        android:title="선택 모드 취소" />
+</menu>

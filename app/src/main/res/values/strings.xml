@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FlexaNote</string>
+    <string name="file_icon">File icon</string>
+    <string name="folder_icon">Folder icon</string>
+    <string name="pdf_icon">PDF icon</string>
+</resources>
