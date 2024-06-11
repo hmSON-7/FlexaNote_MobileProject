@@ -340,7 +340,12 @@ public class MainActivity extends AppCompatActivity implements FileAdapter.OnFol
 
     @Override
     public void onFileClick(File file) {
-
+        // 파일 클릭시 PDF 보기를 여는 코드 추가
+        if (file.getName().endsWith(".pdf")) {
+            Intent intent = new Intent(this, PdfViewerActivity.class);
+            intent.putExtra("filePath", file.getAbsolutePath());
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -367,7 +372,7 @@ public class MainActivity extends AppCompatActivity implements FileAdapter.OnFol
         @Override
         protected Boolean doInBackground(Void... voids) {
             try {
-                String apiKey = "your_api_key";  // ConvertAPI API 키
+                String apiKey = "lvcrSiNkgFewp3pc";  // ConvertAPI API 키
                 String endpoint = "https://v2.convertapi.com/convert/docx/to/pdf?Secret=" + apiKey;
                 String fileName = getFileName(fileUri);
                 File inputFile = new File(getCacheDir(), fileName);
@@ -466,5 +471,4 @@ public class MainActivity extends AppCompatActivity implements FileAdapter.OnFol
             }
         }
     }
-
 }
